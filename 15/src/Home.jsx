@@ -6,7 +6,13 @@ const content = 'Текст для вкладки Home';
 
 class Home extends React.Component {
   // BEGIN (write your solution here)
-
+render() {
+    return (
+      <ThemeContext.Consumer>
+        {({ theme }) => <article className={theme.className}>{content}</article>}
+      </ThemeContext.Consumer>
+    );
+  }
   // END
 }
 
